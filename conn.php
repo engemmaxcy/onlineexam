@@ -2,8 +2,9 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "emma2020";
 $db   = "cee_db";
+$port = "3306";
 
 
 try {
