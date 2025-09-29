@@ -1,0 +1,13 @@
+drop table examinee_tbl;
+CREATE TABLE `examinee_tbl` (
+  `exmne_id` int NOT NULL AUTO_INCREMENT,
+  `exmne_fullname` varchar(1000) NOT NULL,
+  `exmne_course` varchar(1000) NOT NULL,
+  `exmne_gender` varchar(1000) NOT NULL,
+   `exmne_contact` VARCHAR(20) NOT NULL,
+  `exmne_year_level` varchar(1000) NOT NULL,
+  `exmne_email` varchar(1000) NOT NULL,
+  `exmne_password` varchar(1000) NOT NULL,
+  `exmne_status` varchar(1000) NOT NULL DEFAULT 'active',
+  PRIMARY KEY (`exmne_id`)
+);

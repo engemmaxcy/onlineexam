@@ -30,7 +30,7 @@ else if($selExamineeEmail->rowCount() > 0)
 }
 else
 {
-	$insData = $conn->query("INSERT INTO examinee_tbl(exmne_fullname,exmne_course,exmne_gender,exmne_birthdate,exmne_year_level,exmne_email,exmne_password) VALUES('$fullname','$course','$gender','$bdate','$year_level','$email','$password')  ");
+	$insData = $conn->query("INSERT INTO examinee_tbl(exmne_fullname,exmne_course,exmne_gender,exmne_contact,exmne_year_level,exmne_email,exmne_password) VALUES('$fullname','$course','$gender','$exContact','$year_level','$email','$password')  ");
 	if($insData)
 	{
 		$res = array("res" => "success", "msg" => $email);
