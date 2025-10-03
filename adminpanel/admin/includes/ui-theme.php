@@ -277,3 +277,37 @@
                 </div>
             </div>
         </div> 
+
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+ 
+    const savedHeaderClass = localStorage.getItem("header-class");
+    if (savedHeaderClass) {
+        document.querySelector(".app-header").className = "app-header " + savedHeaderClass;
+    }
+
+   
+    const savedSidebarClass = localStorage.getItem("sidebar-class");
+    if (savedSidebarClass) {
+        document.querySelector(".app-sidebar").className = "app-sidebar " + savedSidebarClass;
+    }
+
+ 
+    document.querySelectorAll(".switch-header-cs-class").forEach(function (el) {
+        el.addEventListener("click", function () {
+            const cls = this.getAttribute("data-class");
+            document.querySelector(".app-header").className = "app-header " + cls;
+            localStorage.setItem("header-class", cls); // save choice
+        });
+    });
+
+   
+    document.querySelectorAll(".switch-sidebar-cs-class").forEach(function (el) {
+        el.addEventListener("click", function () {
+            const cls = this.getAttribute("data-class");
+            document.querySelector(".app-sidebar").className = "app-sidebar " + cls;
+            localStorage.setItem("sidebar-class", cls); // save choice
+        });
+    });
+});
+</script>

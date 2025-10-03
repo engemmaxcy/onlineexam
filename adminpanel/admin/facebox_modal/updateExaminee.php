@@ -35,9 +35,12 @@ $selExmne = $conn->query("SELECT * FROM examinee_tbl WHERE exmne_id='$id' ")->fe
             </div>
 
             <div class="mb-3">
-               <label class="form-label">Contact</label>
-               <input type="text" name="exContact" class="form-control" required
-                  value="<?php echo $selExmne['exmne_contact']; ?>" />
+   <label class="form-label">Contact</label>
+<input type="tel" name="exContact" class="form-control" 
+       required maxlength="10" pattern="^[0-9]{10}$"
+       value="<?php echo $selExmne['exmne_contact']; ?>" />
+
+
             </div>
 
             <div class="mb-3">
